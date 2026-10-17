@@ -1,0 +1,33 @@
+{
+  "collected_at_utc": "2026-10-15T13:18:37.671938+00:00",
+  "public_only": true,
+  "counts": {
+    "divar_tehran": 24,
+    "divar_karaj": 24,
+    "divar_shiraz": 24,
+    "divar_mashhad": 0,
+    "divar_tabriz": 0,
+    "bama": 10
+  },
+  "raw_rows": 82,
+  "clean_rows": 76,
+  "cleaning": {
+    "input_rows": 82,
+    "output_rows": 76,
+    "duplicates_removed": 0,
+    "invalid_removed": 6,
+    "outliers_removed": 0,
+    "warnings": [
+      "Small dataset: model estimates will be unstable."
+    ]
+  },
+  "errors": [
+    "No supported vehicle JSON-LD at https://divar.ir/s/mashhad/car",
+    "No supported vehicle JSON-LD at https://divar.ir/s/tabriz/car"
+  ],
+  "notes": [
+    "No login, CAPTCHA, or rate-limit bypass is attempted.",
+    "Divar structured prices are converted from IRR.",
+    "Bama price magnitudes are treated as toman despite current JSON-LD priceCurrency=IRR."
+  ]
+}

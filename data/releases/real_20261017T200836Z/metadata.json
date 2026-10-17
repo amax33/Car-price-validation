@@ -1,0 +1,137 @@
+{
+  "release": "real_20261017T200836Z",
+  "created_at_utc": "2026-10-17T20:08:56.180398+00:00",
+  "dataset_rows": 1062,
+  "training_rows": 1013,
+  "dataset_sha256": "d8cd53c40e533f6c944f7fa435c2ab07e34dfe1f23c5251265afa839844b66ca",
+  "database_sha256": "febc1e26933e0d0a801b484e0a872fb94a9a9339f2bac74267ab67f2bdf8aacf",
+  "sources": {
+    "bama": 96,
+    "divar": 966
+  },
+  "cleaning": {
+    "input_rows": 1084,
+    "output_rows": 1062,
+    "duplicates_removed": 1,
+    "invalid_removed": 0,
+    "outliers_removed": 21,
+    "warnings": []
+  },
+  "eligibility": {
+    "input_rows": 1062,
+    "eligible_rows": 1013,
+    "excluded_rows": 49,
+    "malformed_or_partial_price_below_1000_million_irr": 12,
+    "transfer_salvage_installment_or_nonstandard_url": 37,
+    "overlap_between_rules": 0
+  },
+  "model_artifact": "artifacts/real_model.joblib",
+  "model_sha256": "a487a93c2a51d882545c63d87fa185668b84f5c5f6abf5b4533312b26d612c8e",
+  "metrics": {
+    "dataset": "real public Divar/Bama listings",
+    "rows": 1013,
+    "unique_listing_dates": 2,
+    "validation_strategy": "5-fold shuffled out-of-fold validation",
+    "temporal_validation_available": false,
+    "validation_warning": "Only a few collection dates are available; these scores do not measure future market drift.",
+    "model": {
+      "mae": 11002.649,
+      "rmse": 45710.651,
+      "mape": 0.385,
+      "r2": 0.1233,
+      "median_ape": 0.1333,
+      "wmape": 0.4001
+    },
+    "baseline_hierarchical_median": {
+      "mae": 11629.98,
+      "rmse": 46208.325,
+      "mape": 0.4372,
+      "r2": 0.1041,
+      "median_ape": 0.1939,
+      "wmape": 0.4229
+    },
+    "segments": {
+      "support_at_least_5": {
+        "rows": 513,
+        "mae": 1709.081,
+        "rmse": 3915.433,
+        "mape": 0.177,
+        "r2": 0.837,
+        "median_ape": 0.093,
+        "wmape": 0.129
+      },
+      "support_at_least_10": {
+        "rows": 352,
+        "mae": 1554.733,
+        "rmse": 3989.416,
+        "mape": 0.1842,
+        "r2": 0.5584,
+        "median_ape": 0.0997,
+        "wmape": 0.141
+      }
+    },
+    "interval_method": "symmetric log residual interval with out-of-fold conformal expansion",
+    "interval_coverage_oof": 0.8993,
+    "mean_interval_width_pct_oof": 1.5771,
+    "folds": [
+      {
+        "fold": 1,
+        "train_rows": 810,
+        "validation_rows": 203,
+        "mae": 12777.328,
+        "rmse": 57489.737,
+        "mape": 0.3255,
+        "r2": 0.1942,
+        "median_ape": 0.1188,
+        "wmape": 0.4131
+      },
+      {
+        "fold": 2,
+        "train_rows": 810,
+        "validation_rows": 203,
+        "mae": 10105.778,
+        "rmse": 28292.027,
+        "mape": 0.4415,
+        "r2": 0.0645,
+        "median_ape": 0.1457,
+        "wmape": 0.4188
+      },
+      {
+        "fold": 3,
+        "train_rows": 810,
+        "validation_rows": 203,
+        "mae": 12223.445,
+        "rmse": 54883.281,
+        "mape": 0.5454,
+        "r2": 0.3855,
+        "median_ape": 0.1359,
+        "wmape": 0.4339
+      },
+      {
+        "fold": 4,
+        "train_rows": 811,
+        "validation_rows": 202,
+        "mae": 11217.466,
+        "rmse": 54090.612,
+        "mape": 0.2376,
+        "r2": -2.3397,
+        "median_ape": 0.1306,
+        "wmape": 0.4264
+      },
+      {
+        "fold": 5,
+        "train_rows": 811,
+        "validation_rows": 202,
+        "mae": 8678.842,
+        "rmse": 19990.905,
+        "mape": 0.3745,
+        "r2": 0.6505,
+        "median_ape": 0.139,
+        "wmape": 0.3105
+      }
+    ],
+    "fallback_threshold": 5
+  },
+  "examples": "artifacts/real_example_outputs.json",
+  "active_api_model": true
+}

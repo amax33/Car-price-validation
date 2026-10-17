@@ -1,0 +1,94 @@
+{
+  "release": "real_20261017T200451Z",
+  "created_at_utc": "2026-10-17T20:06:28.956187+00:00",
+  "dataset_rows": 1062,
+  "dataset_sha256": "d8cd53c40e533f6c944f7fa435c2ab07e34dfe1f23c5251265afa839844b66ca",
+  "database_sha256": "febc1e26933e0d0a801b484e0a872fb94a9a9339f2bac74267ab67f2bdf8aacf",
+  "sources": {
+    "bama": 96,
+    "divar": 966
+  },
+  "cleaning": {
+    "input_rows": 1084,
+    "output_rows": 1062,
+    "duplicates_removed": 1,
+    "invalid_removed": 0,
+    "outliers_removed": 21,
+    "warnings": []
+  },
+  "model_artifact": "artifacts/real_model.joblib",
+  "model_sha256": "b58de65771fc911b2000673331dc9f50a3a93d182c4e796fb2b048afced2d424",
+  "metrics": {
+    "dataset": "real public Divar/Bama listings",
+    "rows": 1062,
+    "unique_listing_dates": 2,
+    "validation_strategy": "5-fold shuffled out-of-fold validation",
+    "temporal_validation_available": false,
+    "validation_warning": "Only a few collection dates are available; these scores do not measure future market drift.",
+    "model": {
+      "mae": 11648.127,
+      "rmse": 46556.405,
+      "mape": 19.9834,
+      "r2": 0.0836
+    },
+    "baseline_hierarchical_median": {
+      "mae": 12266.392,
+      "rmse": 47159.618,
+      "mape": 20.5337,
+      "r2": 0.0597
+    },
+    "interval_method": "5th/95th quantile models with out-of-fold conformal expansion",
+    "interval_coverage_oof": 0.9002,
+    "mean_interval_width_pct_oof": 1.7811,
+    "folds": [
+      {
+        "fold": 1,
+        "train_rows": 849,
+        "validation_rows": 213,
+        "mae": 8553.182,
+        "rmse": 20897.378,
+        "mape": 13.4351,
+        "r2": 0.3733
+      },
+      {
+        "fold": 2,
+        "train_rows": 849,
+        "validation_rows": 213,
+        "mae": 14761.893,
+        "rmse": 64295.987,
+        "mape": 40.6358,
+        "r2": 0.1415
+      },
+      {
+        "fold": 3,
+        "train_rows": 850,
+        "validation_rows": 212,
+        "mae": 12966.774,
+        "rmse": 53877.532,
+        "mape": 0.3397,
+        "r2": 0.2244
+      },
+      {
+        "fold": 4,
+        "train_rows": 850,
+        "validation_rows": 212,
+        "mae": 9551.91,
+        "rmse": 30777.612,
+        "mape": 9.991,
+        "r2": 0.3672
+      },
+      {
+        "fold": 5,
+        "train_rows": 850,
+        "validation_rows": 212,
+        "mae": 12406.786,
+        "rmse": 49149.349,
+        "mape": 35.4491,
+        "r2": -1.3229
+      }
+    ],
+    "fallback_threshold": 5
+  },
+  "examples": "artifacts/real_example_outputs.json",
+  "active_api_model": true
+}
