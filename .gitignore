@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+artifacts/*.joblib
+artifacts/*.json
+data/*.db
+data/processed/
+data/raw/snapshots/
+data/raw/long_scraper.log
+data/raw/long_scraper_state.json
+data/*.lock
