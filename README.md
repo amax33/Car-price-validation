@@ -8,6 +8,8 @@ The repository is runnable offline. The synthetic dataset remains available for
 pipeline tests, while the active API model now uses the frozen, versioned real-data
 release described in [the final report](FINAL_REPORT.md).
 
+گزارش کامل فارسی پروژه نیز در [REPORT_FA.md](REPORT_FA.md) قرار دارد.
+
 ## Included real snapshot
 
 The cumulative SQLite database reached 1,084 unique public listings. Finalization

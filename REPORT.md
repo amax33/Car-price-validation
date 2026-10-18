@@ -1,7 +1,7 @@
 # Car market valuation — development report
 
 > **Final result:** This document preserves the earlier synthetic/demo analysis for
-> auditability. The current submission, frozen real dataset, real-data validation,
+> auditability. The current release, frozen real dataset, real-data validation,
 > five real outputs, and active API model are documented in
 > [FINAL_REPORT.md](FINAL_REPORT.md). Do not use the synthetic metrics below as the
 > current headline result.

@@ -54,4 +54,4 @@ Make/model groups with fewer than five training rows blend the learned estimate 
 - Rare models depend heavily on hierarchical fallback estimates.
 - Bama price magnitudes are interpreted as toman despite its current JSON-LD IRR label.
 
-This is a credible challenge submission and research prototype, not a production appraisal service.
+This release is a reproducible research prototype, not a production appraisal service.
